@@ -1,6 +1,29 @@
+import { useRef } from "react";
+
 export default function App() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  function playMusic() {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  }
+
+  function createConfetti(e: React.MouseEvent<HTMLDivElement>) {
+    const el = document.createElement("div");
+    el.innerText = "🎉";
+    el.style.position = "absolute";
+    el.style.left = e.clientX + "px";
+    el.style.top = e.clientY + "px";
+    el.style.fontSize = "20px";
+    el.style.animation = "fall 2s linear forwards";
+    document.body.appendChild(el);
+
+    setTimeout(() => el.remove(), 2000);
+  }
+
   return (
-    <div className="page">
+    <div className="page" onClick={createConfetti}>
       <div className="card">
         <img
           src="https://i.imgur.com/oVvB5h0.jpeg"
@@ -9,19 +32,30 @@ export default function App() {
         />
 
         <h2>selam</h2>
-        <h1>ben broken begüm</h1>
+        <h1>broken begüm</h1>
 
-        <p>hepinizin amk.</p>
+        <p>yaşasın evbah yasasın dembuh.</p>
 
         <div className="links">
           <a href="https://instagram.com/begmilkiimm0" target="_blank">Instagram</a>
           <a href="https://www.tiktok.com/@bgmilkimm0?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
           <a href="https://open.spotify.com/user/kj53vb35otwjhgpuizj161skd?si=11416fe3f3a14d9c" target="_blank">Spotify</a>
         </div>
+
+        <button onClick={playMusic} className="musicBtn">
+          🎵 müziği aç (Deniz Seki - Aşk)
+        </button>
+
+        <audio
+          ref={audioRef}
+          src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f6c1c0c2b.mp3"
+        />
       </div>
 
       {/* kalpler */}
-      <div className="hearts">💖 💕 💗 💓 💞 💖 💕</div>
+      {Array.from({ length: 30 }).map((_, i) => (
+        <div key={i} className="heart">💖</div>
+      ))}
 
       <style>{`
         body {
@@ -34,7 +68,7 @@ export default function App() {
           display: flex;
           justify-content: center;
           align-items: center;
-          background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+          background: linear-gradient(135deg, #ff9a9e, #fbc2eb);
           font-family: Arial;
           position: relative;
         }
@@ -45,9 +79,8 @@ export default function App() {
           border-radius: 20px;
           text-align: center;
           color: white;
-          background: rgba(0,0,0,0.2);
+          background: rgba(0,0,0,0.25);
           backdrop-filter: blur(12px);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
           z-index: 2;
         }
 
@@ -76,16 +109,24 @@ export default function App() {
           text-decoration: none;
         }
 
-        .hearts {
-          position: absolute;
-          bottom: 20px;
-          font-size: 22px;
-          animation: float 4s infinite linear;
+        .musicBtn {
+          margin-top: 15px;
+          padding: 10px;
+          border-radius: 10px;
+          border: none;
+          cursor: pointer;
         }
 
-        @keyframes float {
+        .heart {
+          position: absolute;
+          top: -50px;
+          font-size: 20px;
+          animation: fall 6s linear infinite;
+        }
+
+        @keyframes fall {
           0% { transform: translateY(0); opacity: 1; }
-          100% { transform: translateY(-600px); opacity: 0; }
+          100% { transform: translateY(100vh); opacity: 0; }
         }
       `}</style>
     </div>
