@@ -23,7 +23,7 @@ export default function App() {
         }}
       >
         <img
-          src="https://scontent.cdninstagram.com/v/t51.82787-19/600208649_17942970198088572_5730895202440894775_n.jpg"
+          src="https://i.imgur.com/oVvB5h0.jpeg"
           alt="profil"
           style={{
             width: 110,
@@ -36,7 +36,7 @@ export default function App() {
         />
 
         <h2>selam canım</h2>
-        <h1 style={{ marginTop: 5 }}>I’m broken begüm</h1>
+        <h1 style={{ marginTop: 5 }}>ben broken begüm</h1>
 
         <p style={{ opacity: 0.8 }}>welcome to my world ✨</p>
 
