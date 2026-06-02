@@ -6,7 +6,7 @@ export default function App() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+        background: "linear-gradient(135deg, #ff9a9e, #fad0c4)",
         fontFamily: "Arial, sans-serif",
       }}
     >
@@ -36,32 +36,20 @@ export default function App() {
         />
 
         <h2>selam canım</h2>
-        <h1 style={{ marginTop: 5 }}>ben broken begüm</h1>
+        <h1 style={{ marginTop: 5 }}>I’m broken begüm</h1>
 
         <p style={{ opacity: 0.8 }}>welcome to my world ✨</p>
 
         <div style={{ marginTop: 25 }}>
-          <a
-            href="https://instagram.com/begmilkiimm0"
-            target="_blank"
-            style={linkStyle}
-          >
+          <a href="https://instagram.com/begmilkiimm0" target="_blank" style={linkStyle}>
             Instagram
           </a>
 
-          <a
-            href="https://www.tiktok.com/@bgmilkimm0?is_from_webapp=1&sender_device=pc"
-            target="_blank"
-            style={linkStyle}
-          >
+          <a href="https://www.tiktok.com/@bgmilkimm0?is_from_webapp=1&sender_device=pc" target="_blank" style={linkStyle}>
             TikTok
           </a>
 
-          <a
-            href="https://open.spotify.com/user/kj53vb35otwjhgpuizj161skd?si=11416fe3f3a14d9c"
-            target="_blank"
-            style={linkStyle}
-          >
+          <a href="https://open.spotify.com/user/kj53vb35otwjhgpuizj161skd?si=11416fe3f3a14d9c" target="_blank" style={linkStyle}>
             Spotify
           </a>
         </div>
