@@ -23,7 +23,7 @@ export default function App() {
         }}
       >
         <img
-          src="https://i.imgur.com/8Km9tLL.jpg"
+          src="https://scontent.cdninstagram.com/v/t51.82787-19/600208649_17942970198088572_5730895202440894775_n.jpg"
           alt="profil"
           style={{
             width: 110,
@@ -41,15 +41,27 @@ export default function App() {
         <p style={{ opacity: 0.8 }}>welcome to my world ✨</p>
 
         <div style={{ marginTop: 25 }}>
-          <a style={linkStyle} href="https://instagram.com/begmilkiimm0" target="_blank">
+          <a
+            href="https://instagram.com/begmilkiimm0"
+            target="_blank"
+            style={linkStyle}
+          >
             Instagram
           </a>
 
-          <a style={linkStyle} href="https://www.tiktok.com/@bgmilkimm0?is_from_webapp=1&sender_device=pc" target="_blank">
+          <a
+            href="https://www.tiktok.com/@bgmilkimm0?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            style={linkStyle}
+          >
             TikTok
           </a>
 
-          <a style={linkStyle} href="https://open.spotify.com/user/kj53vb35otwjhgpuizj161skd?si=11416fe3f3a14d9c" target="_blank">
+          <a
+            href="https://open.spotify.com/user/kj53vb35otwjhgpuizj161skd?si=11416fe3f3a14d9c"
+            target="_blank"
+            style={linkStyle}
+          >
             Spotify
           </a>
         </div>
