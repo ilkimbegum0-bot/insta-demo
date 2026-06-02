@@ -36,9 +36,9 @@ export default function App() {
         />
 
         <h2>selam canım</h2>
-        <h1 style={{ marginTop: 5 }}>I’m broken begüm</h1>
+        <h1 style={{ marginTop: 5 }}> ben broken begüm</h1>
 
-        <p style={{ opacity: 0.8 }}>welcome to my world ✨</p>
+        <p style={{ opacity: 0.8 }}>hepinizin amına koyım ✨</p>
 
         <div style={{ marginTop: 25 }}>
           <a href="https://instagram.com/begmilkiimm0" target="_blank" style={linkStyle}>
@@ -64,6 +64,6 @@ const linkStyle = {
   padding: "10px",
   borderRadius: 10,
   background: "rgba(255,255,255,0.15)",
-  color: "white",
+  color: "pink",
   textDecoration: "none",
 };
